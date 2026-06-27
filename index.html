@@ -24,7 +24,7 @@
         
         .camera-container { position: relative; width: 100%; flex: 1; background-color: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; }
         #camera { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; z-index: 1; }
-        #overlayCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; z-index: 2; }
+        #overlayCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; z-index: 2; display: none; /* QRツインスキャン中の枠表示（検出ボックス・クロップ枠）を全て非表示 */ }
         #zxingCanvas { display: none; }
         
         #cameraControls { position: absolute; bottom: 30px; left: 0; width: 100%; z-index: 50; display: none; justify-content: center; gap: 15px; pointer-events: none; }
@@ -78,7 +78,7 @@
         .qr-data-card .text { font-size: 1.1rem; color: #fff; word-break: break-all; font-family: monospace; }
         .qr-data-card .text a { color: #64B5F6; text-decoration: underline; }
         .qr-data-card .mgmt { font-size: 0.8rem; color: #4CAF50; font-family: monospace; margin-top: 4px; }
-        #resultScreen { justify-content: flex-start; overflow-y: auto; }
+        #resultScreen { justify-content: center; overflow-y: auto; }
         #resultScreen .overlay-box { max-height: calc(100dvh - 40px); overflow-y: auto; max-width: 520px; }
         #scanStatsText { max-height: 34dvh; overflow-y: auto; overflow-x: auto; font-size: 0.82rem; line-height: 1.35; word-break: normal; white-space: pre; }
         
